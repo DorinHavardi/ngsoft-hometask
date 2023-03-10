@@ -2,6 +2,13 @@
     "common": {
         "nextPhase": "לשלב הבא"
     },
+    "tabBar": {
+        "settings": "הגדרות",
+        "contact": "צור קשר",
+        "homepage": "עמוד הבית",
+        "notifications": "הודעות",
+        "nearMe": "קרוב אלי"
+    },
     "profile": {
         "back": "חזרה",
         "title": "פרטי מגיש הבקשה",

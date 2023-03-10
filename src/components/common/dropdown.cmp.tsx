@@ -9,7 +9,7 @@ import {
 } from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
-import {DownIcon} from '../svg/down.icon copy';
+import { DownIcon } from '../svg/down.icon';
 
 interface IDropdown {
   options: Array<string>;

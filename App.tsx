@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {I18nManager, SafeAreaView, StyleSheet} from 'react-native';
+import {I18nManager, SafeAreaView, StyleSheet, View} from 'react-native';
 import {Profile} from './src/views/profile.screen';
 import './src/translates/i18n';
 import {observer} from 'mobx-react';
@@ -19,7 +19,9 @@ const App = () => {
 
   return (
     <SafeAreaView>
-      <Profile />
+        <View>
+          <Profile />
+        </View>
     </SafeAreaView>
   );
 };

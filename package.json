@@ -10,6 +10,8 @@
     "test": "jest"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.5.7",
+    "@react-navigation/native": "^6.1.6",
     "i18next": "^22.4.11",
     "mobx": "^6.8.0",
     "mobx-react": "^7.6.0",
