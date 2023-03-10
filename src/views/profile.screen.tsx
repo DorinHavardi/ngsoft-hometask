@@ -41,7 +41,7 @@ export const Profile: FC<any> = () => {
         <Text style={[styles.text, {fontWeight: 'bold', fontSize: 20}]}>
           {t('profile.title')}
         </Text>
-        <Text style={[styles.text, {fontSize: 18}]}>
+        <Text style={[styles.text, {fontWeight: '400', fontSize: 18}]}>
           {t('profile.subtitle')}
         </Text>
       </View>
@@ -97,6 +97,7 @@ const styles = StyleSheet.create({
     fontFamily: Fonts.Rubik_Light,
     fontSize: 18,
     color: Colors.white,
+    fontWeight: '400',
   },
   logo: {
     width: 53,

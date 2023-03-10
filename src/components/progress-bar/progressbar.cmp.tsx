@@ -78,6 +78,7 @@ const styles = StyleSheet.create({
   text: {
     fontFamily: Fonts.Rubik_Light,
     fontSize: 19,
+    fontWeight: "400"
   },
   line: {
     borderBottomColor: Colors.primary,
