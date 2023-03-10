@@ -2,6 +2,12 @@
     "profile": {
         "back": "חזור",
         "title": "פרטי מגיש הבקשה", 
-        "subtitle": "הכנס פרטים אישיים"
+        "subtitle": "הכנס פרטים אישיים",
+        "form": {
+            "firstName": "שם פרטי",
+            "lastName": "שם משפחה",
+            "id": "תעודת זהות",
+            "requestReason": "סיבת הנפקה"
+        }
     }
 }
