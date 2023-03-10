@@ -1,13 +1,14 @@
 {
     "profile": {
         "back": "חזור",
-        "title": "פרטי מגיש הבקשה", 
+        "title": "פרטי מגיש הבקשה",
         "subtitle": "הכנס פרטים אישיים",
         "form": {
             "firstName": "שם פרטי",
             "lastName": "שם משפחה",
             "id": "תעודת זהות",
-            "requestReason": "סיבת הנפקה"
+            "requestReason": "סיבת הנפקה",
+            "newsletter": "הנני מאשר/ת קבלת דיוור"
         }
     }
 }

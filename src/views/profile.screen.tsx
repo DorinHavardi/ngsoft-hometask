@@ -12,6 +12,7 @@ import {useTranslation} from 'react-i18next';
 import {Fonts} from '../theme/fonts';
 import {Input} from '../components/common/input.cmp';
 import {ProgressBar} from '../components/progress-bar/progressbar.cmp';
+import {RadioButton} from '../components/common/radio-button.cmp';
 
 export const Profile: FC<any> = () => {
   const {t} = useTranslation();
@@ -37,6 +38,10 @@ export const Profile: FC<any> = () => {
           <Input
             onChangeText={() => console.log('onChangeText')}
             placeholder={`${t('profile.form.firstName')}`}
+          />
+          <RadioButton
+            label={`${t('profile.form.newsletter')}`}
+            checked={true}
           />
         </View>
       </View>

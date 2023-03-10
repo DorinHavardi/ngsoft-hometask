@@ -23,6 +23,7 @@ const styles = StyleSheet.create({
     height: 46,
     borderColor: Colors.primary,
     borderWidth: 1,
+    marginBottom: 15,
     padding: 14,
     paddingStart: 21,
     fontFamily: Fonts.Rubik_Light,
