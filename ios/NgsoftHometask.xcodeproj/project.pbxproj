@@ -8,12 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* NgsoftHometaskTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NgsoftHometaskTests.m */; };
+		0AA477E93ED643E894218614 /* Rubik-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 522535EE35C3442CA3AF02BA /* Rubik-Italic.ttf */; };
 		0C80B921A6F3F58F76C31292 /* libPods-NgsoftHometask.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-NgsoftHometask.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		205A7B2A83CD474F9DFF29A2 /* Rubik-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A10E0FC97CC141DCAA062BD5 /* Rubik-Black.ttf */; };
+		2A314EDC960542828E0AD427 /* Rubik-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8448A5DDAD9A4F69893C66D8 /* Rubik-Medium.ttf */; };
+		3545B612C88147B996586AC3 /* Rubik-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A949C21BA2A8418B888B2B04 /* Rubik-ExtraBoldItalic.ttf */; };
+		5D446C08BC57414AA122B2DC /* Rubik-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3C3357A5F712498C82D1AE14 /* Rubik-BlackItalic.ttf */; };
+		76267ED427004C88AFD48FB2 /* Rubik-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8F755DC1164C444CA7C08523 /* Rubik-SemiBold.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-NgsoftHometask-NgsoftHometaskTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-NgsoftHometask-NgsoftHometaskTests.a */; };
+		80523F4328B14D9EAC7FF276 /* Rubik-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 438CC9F4247E47BD8310FC69 /* Rubik-Bold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		958EAECF58F84F8CA2CE336A /* Rubik-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C699B1E278A4D07B22D11C2 /* Rubik-SemiBoldItalic.ttf */; };
+		A7C165B4F1844531BFD085ED /* Rubik-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 553322ECBDE64C08BB0DA36A /* Rubik-Light.ttf */; };
+		AFF3090D81A740D19CEB8B9E /* Rubik-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 573EAF61EA954E7BAA52E273 /* Rubik-BoldItalic.ttf */; };
+		B51E596C450B4E9B86334CBF /* Rubik-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4C46759BC2074B7987A3E584 /* Rubik-MediumItalic.ttf */; };
+		DDB85E39D46543A9849EDBC8 /* Rubik-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29C3CB974A774B87846FE519 /* Rubik-Regular.ttf */; };
+		EE181586F5964D69BD4C355D /* Rubik-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D783B437FAB44487A247566D /* Rubik-ExtraBold.ttf */; };
+		FFCB81D9296644168B5D5A8B /* Rubik-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4132DA133D394DF5AAE2D739 /* Rubik-LightItalic.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,12 +51,26 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = NgsoftHometask/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = NgsoftHometask/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-NgsoftHometask-NgsoftHometaskTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NgsoftHometask-NgsoftHometaskTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		29C3CB974A774B87846FE519 /* Rubik-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Regular.ttf"; path = "../assets/fonts/Rubik-Regular.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-NgsoftHometask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NgsoftHometask.debug.xcconfig"; path = "Target Support Files/Pods-NgsoftHometask/Pods-NgsoftHometask.debug.xcconfig"; sourceTree = "<group>"; };
+		3C3357A5F712498C82D1AE14 /* Rubik-BlackItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BlackItalic.ttf"; path = "../assets/fonts/Rubik-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4132DA133D394DF5AAE2D739 /* Rubik-LightItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-LightItalic.ttf"; path = "../assets/fonts/Rubik-LightItalic.ttf"; sourceTree = "<group>"; };
+		438CC9F4247E47BD8310FC69 /* Rubik-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Bold.ttf"; path = "../assets/fonts/Rubik-Bold.ttf"; sourceTree = "<group>"; };
+		4C46759BC2074B7987A3E584 /* Rubik-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-MediumItalic.ttf"; path = "../assets/fonts/Rubik-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4C699B1E278A4D07B22D11C2 /* Rubik-SemiBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-SemiBoldItalic.ttf"; path = "../assets/fonts/Rubik-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		522535EE35C3442CA3AF02BA /* Rubik-Italic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Italic.ttf"; path = "../assets/fonts/Rubik-Italic.ttf"; sourceTree = "<group>"; };
+		553322ECBDE64C08BB0DA36A /* Rubik-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Light.ttf"; path = "../assets/fonts/Rubik-Light.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-NgsoftHometask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NgsoftHometask.release.xcconfig"; path = "Target Support Files/Pods-NgsoftHometask/Pods-NgsoftHometask.release.xcconfig"; sourceTree = "<group>"; };
+		573EAF61EA954E7BAA52E273 /* Rubik-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-BoldItalic.ttf"; path = "../assets/fonts/Rubik-BoldItalic.ttf"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-NgsoftHometask-NgsoftHometaskTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NgsoftHometask-NgsoftHometaskTests.debug.xcconfig"; path = "Target Support Files/Pods-NgsoftHometask-NgsoftHometaskTests/Pods-NgsoftHometask-NgsoftHometaskTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-NgsoftHometask.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NgsoftHometask.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NgsoftHometask/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8448A5DDAD9A4F69893C66D8 /* Rubik-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Medium.ttf"; path = "../assets/fonts/Rubik-Medium.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-NgsoftHometask-NgsoftHometaskTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NgsoftHometask-NgsoftHometaskTests.release.xcconfig"; path = "Target Support Files/Pods-NgsoftHometask-NgsoftHometaskTests/Pods-NgsoftHometask-NgsoftHometaskTests.release.xcconfig"; sourceTree = "<group>"; };
+		8F755DC1164C444CA7C08523 /* Rubik-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-SemiBold.ttf"; path = "../assets/fonts/Rubik-SemiBold.ttf"; sourceTree = "<group>"; };
+		A10E0FC97CC141DCAA062BD5 /* Rubik-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-Black.ttf"; path = "../assets/fonts/Rubik-Black.ttf"; sourceTree = "<group>"; };
+		A949C21BA2A8418B888B2B04 /* Rubik-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-ExtraBoldItalic.ttf"; path = "../assets/fonts/Rubik-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		D783B437FAB44487A247566D /* Rubik-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Rubik-ExtraBold.ttf"; path = "../assets/fonts/Rubik-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -122,6 +150,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				97735DC4430841F3A393F1FC /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +164,28 @@
 				00E356EE1AD99517003FC87E /* NgsoftHometaskTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		97735DC4430841F3A393F1FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A10E0FC97CC141DCAA062BD5 /* Rubik-Black.ttf */,
+				3C3357A5F712498C82D1AE14 /* Rubik-BlackItalic.ttf */,
+				438CC9F4247E47BD8310FC69 /* Rubik-Bold.ttf */,
+				573EAF61EA954E7BAA52E273 /* Rubik-BoldItalic.ttf */,
+				D783B437FAB44487A247566D /* Rubik-ExtraBold.ttf */,
+				A949C21BA2A8418B888B2B04 /* Rubik-ExtraBoldItalic.ttf */,
+				522535EE35C3442CA3AF02BA /* Rubik-Italic.ttf */,
+				553322ECBDE64C08BB0DA36A /* Rubik-Light.ttf */,
+				4132DA133D394DF5AAE2D739 /* Rubik-LightItalic.ttf */,
+				8448A5DDAD9A4F69893C66D8 /* Rubik-Medium.ttf */,
+				4C46759BC2074B7987A3E584 /* Rubik-MediumItalic.ttf */,
+				29C3CB974A774B87846FE519 /* Rubik-Regular.ttf */,
+				8F755DC1164C444CA7C08523 /* Rubik-SemiBold.ttf */,
+				4C699B1E278A4D07B22D11C2 /* Rubik-SemiBoldItalic.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -244,6 +295,20 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				205A7B2A83CD474F9DFF29A2 /* Rubik-Black.ttf in Resources */,
+				5D446C08BC57414AA122B2DC /* Rubik-BlackItalic.ttf in Resources */,
+				80523F4328B14D9EAC7FF276 /* Rubik-Bold.ttf in Resources */,
+				AFF3090D81A740D19CEB8B9E /* Rubik-BoldItalic.ttf in Resources */,
+				EE181586F5964D69BD4C355D /* Rubik-ExtraBold.ttf in Resources */,
+				3545B612C88147B996586AC3 /* Rubik-ExtraBoldItalic.ttf in Resources */,
+				0AA477E93ED643E894218614 /* Rubik-Italic.ttf in Resources */,
+				A7C165B4F1844531BFD085ED /* Rubik-Light.ttf in Resources */,
+				FFCB81D9296644168B5D5A8B /* Rubik-LightItalic.ttf in Resources */,
+				2A314EDC960542828E0AD427 /* Rubik-Medium.ttf in Resources */,
+				B51E596C450B4E9B86334CBF /* Rubik-MediumItalic.ttf in Resources */,
+				DDB85E39D46543A9849EDBC8 /* Rubik-Regular.ttf in Resources */,
+				76267ED427004C88AFD48FB2 /* Rubik-SemiBold.ttf in Resources */,
+				958EAECF58F84F8CA2CE336A /* Rubik-SemiBoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
