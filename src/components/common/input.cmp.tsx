@@ -4,12 +4,10 @@ import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
 
 interface IInput {
-  onChangeText: (value: string) => void;
-  value?: string;
   placeholder?: string;
 }
 
-export const Input: FC<IInput> = ({onChangeText, value, placeholder}) => {
+export const Input: FC<IInput> = ({placeholder}) => {
   return (
     <View style={{width: '100%', alignItems: 'center'}}>
       <TextInput style={styles.input} placeholder={placeholder} />

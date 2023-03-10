@@ -12,12 +12,21 @@ import {useTranslation} from 'react-i18next';
 import {Fonts} from '../theme/fonts';
 import {Input} from '../components/common/input.cmp';
 import {ProgressBar} from '../components/progress-bar/progressbar.cmp';
-import {RadioButton} from '../components/common/radio-button.cmp';
 import {Colors} from '../theme/colors';
-import { Button } from '../components/common/button.cmp';
+import {Button} from '../components/common/button.cmp';
+import {Dropdown} from '../components/common/dropdown.cmp';
 
 export const Profile: FC<any> = () => {
   const {t} = useTranslation();
+
+  const options = [
+    `${t('profile.form.reasonOption1')}`,
+    `${t('profile.form.reasonOption2')}`,
+    `${t('profile.form.reasonOption3')}`,
+    `${t('profile.form.reasonOption4')}`,
+    `${t('profile.form.reasonOption5')}`,
+  ];
+
   return (
     <SafeAreaView style={{alignItems: 'center'}}>
       <View style={styles.container}>
@@ -39,15 +48,9 @@ export const Profile: FC<any> = () => {
       <View style={styles.formBackground}>
         <View style={styles.form}>
           <ProgressBar phases={4} currentPhase={2} />
-          <Input
-            onChangeText={() => console.log('onChangeText')}
-            placeholder={`${t('profile.form.firstName')}`}
-          />
-          <RadioButton
-            label={`${t('profile.form.newsletter')}`}
-            checked={true}
-          />
-          <Button title={`${t('common.nextPhase')}`}/>
+          <Input placeholder={`${t('profile.form.firstName')}`} />
+          <Dropdown options={options} />
+          <Button title={`${t('common.nextPhase')}`} />
         </View>
       </View>
     </SafeAreaView>
@@ -82,7 +85,7 @@ const styles = StyleSheet.create({
   },
   backButton: {
     display: 'flex',
-    width: 75,
+    width: 85,
     padding: 15,
     alignItems: 'center',
     alignSelf: 'flex-end',
@@ -92,13 +95,14 @@ const styles = StyleSheet.create({
   },
   backButtonText: {
     fontFamily: Fonts.Rubik_Light,
+    fontSize: 18,
     color: Colors.white,
   },
   logo: {
     width: 53,
     height: 66,
-    top: '-8%',
-    marginBottom: 5,
+    top: '-10%',
+    marginBottom: 2,
   },
   text: {
     color: Colors.white,

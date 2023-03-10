@@ -3,15 +3,20 @@
         "nextPhase": "לשלב הבא"
     },
     "profile": {
-        "back": "חזור",
+        "back": "חזרה",
         "title": "פרטי מגיש הבקשה",
         "subtitle": "הכנס פרטים אישיים",
         "form": {
             "firstName": "שם פרטי",
             "lastName": "שם משפחה",
             "id": "תעודת זהות",
-            "requestReason": "סיבת הנפקה",
-            "newsletter": "הנני מאשר/ת קבלת דיוור"
+            "requestReason": "סיבת הנפקת תעודה",
+            "newsletter": "הנני מאשר/ת קבלת דיוור",
+            "reasonOption1": "אובדן",
+            "reasonOption2": "גניבה",
+            "reasonOption3": "טעות",
+            "reasonOption4": "החלפה",
+            "reasonOption5": "קיבלתי מכתב"
         }
     }
 }

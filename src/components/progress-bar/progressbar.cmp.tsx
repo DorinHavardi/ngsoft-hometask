@@ -1,5 +1,5 @@
-import {FC} from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import React, {FC} from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
 import {CheckIcon} from '../svg/check.icon';
@@ -16,7 +16,7 @@ export const ProgressBar: FC<IProgressBar> = ({phases, currentPhase}) => {
         .fill(0)
         .map((_, i) => {
           return (
-            <>
+            <React.Fragment key={i}>
               <View
                 style={[
                   styles.circle,
@@ -32,8 +32,7 @@ export const ProgressBar: FC<IProgressBar> = ({phases, currentPhase}) => {
                         ? Colors.secondary
                         : Colors.primary,
                   },
-                ]}
-                key={i}>
+                ]}>
                 {currentPhase > i + 1 ? (
                   <CheckIcon />
                 ) : (
@@ -52,7 +51,7 @@ export const ProgressBar: FC<IProgressBar> = ({phases, currentPhase}) => {
                 )}
               </View>
               {phases === i + 1 ? null : <View style={styles.line} />}
-            </>
+            </React.Fragment>
           );
         })}
     </View>
