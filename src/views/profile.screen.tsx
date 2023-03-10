@@ -13,6 +13,8 @@ import {Fonts} from '../theme/fonts';
 import {Input} from '../components/common/input.cmp';
 import {ProgressBar} from '../components/progress-bar/progressbar.cmp';
 import {RadioButton} from '../components/common/radio-button.cmp';
+import {Colors} from '../theme/colors';
+import { Button } from '../components/common/button.cmp';
 
 export const Profile: FC<any> = () => {
   const {t} = useTranslation();
@@ -27,10 +29,12 @@ export const Profile: FC<any> = () => {
           source={require('../../assets/images/logo.png')}
           style={styles.logo}
         />
-        <Text style={[styles.text, {fontWeight: 'bold'}]}>
+        <Text style={[styles.text, {fontWeight: 'bold', fontSize: 20}]}>
           {t('profile.title')}
         </Text>
-        <Text style={styles.text}>{t('profile.subtitle')}</Text>
+        <Text style={[styles.text, {fontSize: 18}]}>
+          {t('profile.subtitle')}
+        </Text>
       </View>
       <View style={styles.formBackground}>
         <View style={styles.form}>
@@ -43,6 +47,7 @@ export const Profile: FC<any> = () => {
             label={`${t('profile.form.newsletter')}`}
             checked={true}
           />
+          <Button title={`${t('common.nextPhase')}`}/>
         </View>
       </View>
     </SafeAreaView>
@@ -52,26 +57,26 @@ const styles = StyleSheet.create({
   container: {
     width: '100%',
     height: 200,
-    backgroundColor: '#016BBB',
+    backgroundColor: Colors.primary,
     alignItems: 'center',
   },
   formBackground: {
-    height: '100%',
+    height: '85%',
     width: '100%',
-    backgroundColor: '#E5E5E5',
+    backgroundColor: Colors.greyBG,
   },
   form: {
     height: '100%',
     width: '90%',
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.white,
     alignSelf: 'center',
     alignItems: 'center',
     alignContent: 'center',
     top: '-3%',
     shadowOffset: {width: -2, height: 4}, // FOR IOS
     elevation: 20, // FOR ANDROID
-    shadowColor: '#000',
+    shadowColor: Colors.black,
     shadowOpacity: 0.2,
     shadowRadius: 3,
   },
@@ -87,7 +92,7 @@ const styles = StyleSheet.create({
   },
   backButtonText: {
     fontFamily: Fonts.Rubik_Light,
-    color: '#fff',
+    color: Colors.white,
   },
   logo: {
     width: 53,
@@ -96,7 +101,7 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   text: {
-    color: '#fff',
+    color: Colors.white,
     fontFamily: Fonts.Rubik_Light,
   },
 });

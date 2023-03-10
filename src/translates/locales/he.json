@@ -1,4 +1,7 @@
 {
+    "common": {
+        "nextPhase": "לשלב הבא"
+    },
     "profile": {
         "back": "חזור",
         "title": "פרטי מגיש הבקשה",

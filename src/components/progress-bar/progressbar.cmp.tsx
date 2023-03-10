@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
   },
   line: {
     borderBottomColor: Colors.primary,
-    borderBottomWidth: StyleSheet.hairlineWidth,
+    borderBottomWidth: 1,
     width: 45,
   },
 });
