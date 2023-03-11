@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Dimensions, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
 
@@ -7,10 +7,12 @@ interface IButton {
   title: string;
   onPress: () => void;
 }
+const windowWidth = Dimensions.get('window').width;
+const windowHeight = Dimensions.get('window').height;
 
 export const Button: FC<IButton> = ({title, onPress}) => {
   return (
-    <View style={{width: '100%', alignItems: 'center'}}>
+    <View style={{width: '100%', alignItems: 'center', position: "relative",bottom: 0}}>
       <TouchableOpacity style={styles.button} onPress={onPress}>
         <Text style={styles.title}>{title}</Text>
       </TouchableOpacity>
@@ -25,6 +27,7 @@ const styles = StyleSheet.create({
     height: 50,
     alignItems: 'center',
     justifyContent: 'center',
+    marginTop: 10
   },
   title: {
     fontFamily: Fonts.Rubik_Light,

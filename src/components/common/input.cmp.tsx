@@ -1,6 +1,12 @@
 import {DefaultTFuncReturn} from 'i18next';
 import {ChangeEvent, FC} from 'react';
-import {I18nManager, StyleSheet, TextInput, View} from 'react-native';
+import {
+  I18nManager,
+  KeyboardType,
+  StyleSheet,
+  TextInput,
+  View,
+} from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
 import {DownIcon} from '../svg/down.icon';
@@ -13,6 +19,7 @@ interface IInput {
   maxLength?: number;
   isDropdown?: boolean;
   isOpen?: boolean;
+  keyboardType?: KeyboardType;
 }
 
 export const Input: FC<IInput> = ({
@@ -23,6 +30,7 @@ export const Input: FC<IInput> = ({
   maxLength,
   isDropdown,
   isOpen,
+  keyboardType,
 }) => {
   return (
     <View style={styles.container}>
@@ -32,11 +40,11 @@ export const Input: FC<IInput> = ({
         onChangeText={onChangeText}
         onBlur={onBlur}
         value={value?.toString()}
-        // defaultValue={stringValue}
         maxLength={maxLength}
         placeholderTextColor={isDropdown ? Colors.primary : Colors.grey}
         editable={!isDropdown}
         pointerEvents={isDropdown ? 'none' : undefined}
+        keyboardType={keyboardType}
       />
       <>
         {isDropdown ? (

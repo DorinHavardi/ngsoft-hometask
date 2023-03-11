@@ -36,7 +36,7 @@ export const Header: FC<IHeader> = ({title, subtitle}) => {
             return;
           }
         }}>
-        <Text style={styles.backButtonText}>{t('profile.back')}</Text>
+        <Text style={styles.backButtonText}>{t('common.back')}</Text>
         <BackIcon />
       </TouchableOpacity>
       <Image

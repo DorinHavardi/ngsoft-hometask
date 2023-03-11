@@ -30,51 +30,33 @@ export const Details: FC<any> = observer(() => {
   const {t} = useTranslation();
   const {setUserDetails, currentUser} = UserStore;
 
-  const options = [
-    `${t('profile.form.reasonOption1')}`,
-    `${t('profile.form.reasonOption2')}`,
-    `${t('profile.form.reasonOption3')}`,
-    `${t('profile.form.reasonOption4')}`,
-    `${t('profile.form.reasonOption5')}`,
-  ];
-
   const setUser = (values: any) => {
     console.log(values);
     setUserDetails(values);
   };
-  console.log(currentUser);
 
   return (
     <SafeAreaView>
       <ScrollView>
         <Header
-          title={`${t('profile.title')}`}
-          subtitle={`${t('profile.subtitle')}`}
+          title={`${t('details.title')}`}
+          subtitle={`${t('details.subtitle')}`}
         />
-        {/* <View style={styles.formBackground}>
-          <Formik
-            initialValues={{firstname: ''}}
-            onSubmit={values => setUser(values)}>
-            {({handleChange, handleSubmit, handleBlur, values}) => (
-              <View style={styles.form}>
-                <ProgressBar phases={4} currentPhase={2} />
-                <Input
-                  placeholder={`${t('profile.form.firstName')}`}
-                  onChangeText={handleChange('firstname')}
-                  onBlur={handleBlur('firstname')}
-                  value={values.firstname}
-                  defaultValue={currentUser?.firstName}
-                  // value={}
-                />
-                <Dropdown options={options} />
-                <Button
-                  title={`${t('common.nextPhase')}`}
-                  onPress={handleSubmit}
-                />
-              </View>
-            )}
-          </Formik>
-        </View> */}
+        <View style={styles.formBackground}>
+          <View style={styles.form}>
+            <ProgressBar phases={4} currentPhase={3} />
+            <Text style={styles.text}>
+              {currentUser?.firstname} {currentUser?.lastname}
+            </Text>
+            <Text style={styles.text}>{currentUser?.id}</Text>
+            <Text style={styles.text}>{currentUser?.birthYear}</Text>
+            <Text style={styles.text}>{t('details.description')}</Text>
+            <Button
+              title={`${t('common.nextPhase')}`}
+              onPress={() => console.log('ok')}
+            />
+          </View>
+        </View>
       </ScrollView>
       <TabBar />
     </SafeAreaView>
@@ -82,12 +64,13 @@ export const Details: FC<any> = observer(() => {
 });
 const styles = StyleSheet.create({
   formBackground: {
-    height: windowHeight - windowHeight / 3,
+    height: windowHeight - windowHeight / 4,
     width: windowWidth,
     backgroundColor: Colors.greyBG,
   },
   form: {
     width: windowWidth - 30,
+    height: windowHeight - windowHeight / 3,
     padding: 20,
     backgroundColor: Colors.white,
     alignSelf: 'center',
@@ -101,7 +84,12 @@ const styles = StyleSheet.create({
     shadowRadius: 3,
   },
   text: {
-    color: Colors.white,
+    color: Colors.primary,
     fontFamily: Fonts.Rubik_Light,
+    fontWeight: '400',
+    fontSize: 16,
+    lineHeight: 22,
+    textAlign: 'center',
+    marginBottom: 10,
   },
 });
