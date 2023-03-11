@@ -26,7 +26,7 @@ const UserStore = stores.UserStore;
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
 
-export const Profile: FC<any> = observer(() => {
+export const Profile: FC<any> = observer(({navigation}) => {
   const {t} = useTranslation();
   const {setUserDetails, currentUser} = UserStore;
 
@@ -43,12 +43,13 @@ export const Profile: FC<any> = observer(() => {
   const setUser = (values: any) => {
     console.log(values);
     setUserDetails(values);
+    navigation.navigate('UserDetails')
   };
   // console.log(currentUser);
 
-  useEffect(() => {
-    console.log('selectedOption', selectedOption);
-  }, [selectedOption]);
+  // useEffect(() => {
+  //   console.log('selectedOption', selectedOption);
+  // }, [selectedOption]);
 
   return (
     <SafeAreaView>

@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/native';
 import {FC} from 'react';
 import {useTranslation} from 'react-i18next';
 import {
@@ -12,6 +13,8 @@ import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
 import {BackIcon} from '../svg/back.icon';
 
+const navigation = useNavigation();
+
 interface IHeader {
   title: string;
   subtitle: string;
@@ -23,7 +26,16 @@ export const Header: FC<IHeader> = ({title, subtitle}) => {
   const {t} = useTranslation();
   return (
     <View style={styles.container}>
-      <TouchableOpacity style={styles.backButton}>
+      <TouchableOpacity
+        style={styles.backButton}
+        onPress={() => {
+          if (navigation.canGoBack()) {
+            navigation.goBack();
+          }
+          else{
+            return;
+          }
+        }}>
         <Text style={styles.backButtonText}>{t('profile.back')}</Text>
         <BackIcon />
       </TouchableOpacity>

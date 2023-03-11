@@ -51,7 +51,7 @@ export const Details: FC<any> = observer(() => {
           title={`${t('profile.title')}`}
           subtitle={`${t('profile.subtitle')}`}
         />
-        <View style={styles.formBackground}>
+        {/* <View style={styles.formBackground}>
           <Formik
             initialValues={{firstname: ''}}
             onSubmit={values => setUser(values)}>
@@ -74,7 +74,7 @@ export const Details: FC<any> = observer(() => {
               </View>
             )}
           </Formik>
-        </View>
+        </View> */}
       </ScrollView>
       <TabBar />
     </SafeAreaView>
