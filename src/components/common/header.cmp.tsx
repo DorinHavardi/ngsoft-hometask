@@ -31,8 +31,7 @@ export const Header: FC<IHeader> = ({title, subtitle}) => {
         onPress={() => {
           if (navigation.canGoBack()) {
             navigation.goBack();
-          }
-          else{
+          } else {
             return;
           }
         }}>

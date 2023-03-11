@@ -4,7 +4,6 @@ import {
   Dimensions,
   StyleSheet,
   Text,
-  TextInput,
   TouchableOpacity,
   View,
 } from 'react-native';
@@ -16,13 +15,11 @@ import {LocationIcon} from '../svg/location.icon';
 import {NotificationsIcon} from '../svg/notifications.icon';
 import {SettingsIcon} from '../svg/settings.icon';
 
-interface ITabBar {
-  placeholder?: string;
-}
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
+interface ITabBar {}
 
-export const TabBar: FC<ITabBar> = ({placeholder}) => {
+const windowWidth = Dimensions.get('window').width;
+
+export const TabBar: FC<ITabBar> = () => {
   const {t} = useTranslation();
   return (
     <View style={styles.container}>
@@ -55,9 +52,7 @@ export const TabBar: FC<ITabBar> = ({placeholder}) => {
 const styles = StyleSheet.create({
   container: {
     flexDirection: 'row',
-    // alignContent: 'center',
     alignItems: 'center',
-    // alignSelf: 'center',
     justifyContent: 'center',
     width: windowWidth,
     height: 62,
@@ -84,12 +79,10 @@ const styles = StyleSheet.create({
   },
   button: {
     flexDirection: 'column',
-    // backgroundColor: "pink",
     alignItems: 'center',
     justifyContent: 'flex-end',
     marginEnd: 15,
     height: 45,
-    // backgroundColor: 'red'
   },
   text: {
     fontFamily: Fonts.Rubik_Light,

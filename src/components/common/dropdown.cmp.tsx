@@ -8,7 +8,6 @@ import React, {
   useEffect,
   useState,
 } from 'react';
-import {useTranslation} from 'react-i18next';
 import {
   ScrollView,
   StyleSheet,
@@ -18,30 +17,27 @@ import {
 } from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
-import {DownIcon} from '../svg/down.icon';
 import {Input} from './input.cmp';
 
 interface IDropdown {
   options: Array<string>;
-  // chosenOption?: string;
   value?: string | undefined;
   defaultValue?: string | number | DefaultTFuncReturn;
   onChangeText: (e: string | ChangeEvent<any>) => void;
   selectedOption: string | null;
   setSelectedOption: Dispatch<SetStateAction<string | null>>;
   placeholder: string;
-  onSelect: ()=> void;
+  onSelect: (value: string | null) => void;
 }
 
 export const Dropdown: FC<IDropdown> = observer(
   ({
     options,
-    value,
     placeholder,
     onChangeText,
     selectedOption,
     setSelectedOption,
-    onSelect
+    onSelect,
   }) => {
     const [isOpen, setIsOpen] = useState<boolean>(false);
 
@@ -54,7 +50,7 @@ export const Dropdown: FC<IDropdown> = observer(
     const handleSelect = (value: string) => {
       setSelectedOption(value);
       setIsOpen(false);
-
+      onSelect(selectedOption);
       return selectedOption;
     };
     return (
@@ -73,7 +69,7 @@ export const Dropdown: FC<IDropdown> = observer(
           nestedScrollEnabled={true}
           showsVerticalScrollIndicator={false}>
           {options.map((option, i) => (
-            <TouchableOpacity key={i} onPress={() => {handleSelect(option); onSelect}}>
+            <TouchableOpacity key={i} onPress={() => handleSelect(option)}>
               <Text style={[styles.text, styles.option]}>{option}</Text>
               <View style={styles.hr} />
             </TouchableOpacity>
@@ -93,7 +89,6 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     borderColor: Colors.primary,
     borderWidth: 1,
-    // marginBottom: 15,
     padding: 14,
     paddingStart: 21,
     fontFamily: Fonts.Rubik_Light,

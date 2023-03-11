@@ -9,16 +9,18 @@ import {
 import React, {FC, useState} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Fonts} from '../theme/fonts';
-import {Input} from '../components/common/input.cmp';
-import {ProgressBar} from '../components/progress-bar/progressbar.cmp';
 import {Colors} from '../theme/colors';
-import {Button} from '../components/common/button.cmp';
-import {Dropdown} from '../components/common/dropdown.cmp';
-import {TabBar} from '../components/common/tab-bar.cmp';
-import {Header} from '../components/common/header.cmp';
 import {Formik} from 'formik';
 import stores from '../stores';
 import {observer} from 'mobx-react';
+import {
+  Header,
+  Button,
+  Input,
+  Dropdown,
+  ProgressBar,
+  TabBar,
+} from '../components/common';
 
 const UserStore = stores.UserStore;
 
@@ -40,7 +42,6 @@ export const Profile: FC<any> = observer(({navigation}) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
   const setUser = (values: any) => {
-    console.log(values);
     setUserDetails(values);
     navigation.navigate('UserDetails');
   };
@@ -107,9 +108,9 @@ export const Profile: FC<any> = observer(({navigation}) => {
                   options={options}
                   value={values.requestReason}
                   placeholder={t('profile.form.requestReason')}
-                  onSelect={() =>
-                    setFieldValue('requestReason', selectedOption)
-                  }
+                  onSelect={selectedOption => {
+                    setFieldValue('requestReason', selectedOption);
+                  }}
                   onChangeText={handleChange('requestReason')}
                 />
                 <Button

@@ -20,7 +20,7 @@ export default class UserStore {
   private _currentUser?: IUserDetails = observable({} as IUserDetails);
 
   setUserDetails = (value: IUserDetails) => {
-    this._currentUser = value as IUserDetails;
+    return (this._currentUser = value as IUserDetails);
   };
 
   get currentUser() {

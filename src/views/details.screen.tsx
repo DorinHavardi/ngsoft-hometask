@@ -10,14 +10,8 @@ import {
 import React, {FC} from 'react';
 import {useTranslation} from 'react-i18next';
 import {Fonts} from '../theme/fonts';
-import {Input} from '../components/common/input.cmp';
-import {ProgressBar} from '../components/progress-bar/progressbar.cmp';
 import {Colors} from '../theme/colors';
-import {Button} from '../components/common/button.cmp';
-import {Dropdown} from '../components/common/dropdown.cmp';
-import {TabBar} from '../components/common/tab-bar.cmp';
-import {Header} from '../components/common/header.cmp';
-import {Formik} from 'formik';
+import {Header, Button, ProgressBar, TabBar} from '../components/common';
 import stores from '../stores';
 import {observer} from 'mobx-react';
 
@@ -28,12 +22,7 @@ const windowHeight = Dimensions.get('window').height;
 
 export const Details: FC<any> = observer(() => {
   const {t} = useTranslation();
-  const {setUserDetails, currentUser} = UserStore;
-
-  const setUser = (values: any) => {
-    console.log(values);
-    setUserDetails(values);
-  };
+  const {currentUser} = UserStore;
 
   return (
     <SafeAreaView>
@@ -49,7 +38,9 @@ export const Details: FC<any> = observer(() => {
               {currentUser?.firstname} {currentUser?.lastname}
             </Text>
             <Text style={styles.text}>{currentUser?.id}</Text>
-            <Text style={styles.text}>{currentUser?.birthYear}</Text>
+            <Text style={styles.text}>
+              {currentUser?.birthYear}, {currentUser?.requestReason}
+            </Text>
             <Text style={styles.text}>{t('details.description')}</Text>
             <Button
               title={`${t('common.nextPhase')}`}

@@ -1,5 +1,5 @@
 import {FC} from 'react';
-import {Dimensions, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
 
@@ -7,8 +7,6 @@ interface IButton {
   title: string;
   onPress: () => void;
 }
-const windowWidth = Dimensions.get('window').width;
-const windowHeight = Dimensions.get('window').height;
 
 export const Button: FC<IButton> = ({title, onPress}) => {
   return (

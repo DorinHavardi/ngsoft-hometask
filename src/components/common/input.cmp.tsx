@@ -1,12 +1,6 @@
 import {DefaultTFuncReturn} from 'i18next';
 import {ChangeEvent, FC} from 'react';
-import {
-  I18nManager,
-  KeyboardType,
-  StyleSheet,
-  TextInput,
-  View,
-} from 'react-native';
+import {KeyboardType, StyleSheet, TextInput, View} from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
 import {DownIcon} from '../svg/down.icon';
