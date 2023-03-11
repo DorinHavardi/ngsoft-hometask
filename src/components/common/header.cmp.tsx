@@ -31,7 +31,7 @@ export const Header: FC<IHeader> = ({title, subtitle}) => {
         source={require('../../../assets/images/logo.png')}
         style={styles.logo}
       />
-      <Text style={[styles.text, {fontWeight: 'bold', fontSize: 20}]}>
+      <Text style={[styles.text, {fontFamily: Fonts.Rubik_Bold, fontSize: 20}]}>
         {title}
       </Text>
       <Text style={[styles.text, {fontWeight: '400', fontSize: 18}]}>

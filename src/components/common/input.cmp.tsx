@@ -1,13 +1,18 @@
+import {DefaultTFuncReturn} from 'i18next';
 import {ChangeEvent, FC} from 'react';
-import {StyleSheet, TextInput, View} from 'react-native';
+import {I18nManager, StyleSheet, TextInput, View} from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
+import {DownIcon} from '../svg/down.icon';
 
 interface IInput {
   placeholder?: string;
   onChangeText: (e: string | ChangeEvent<any>) => void;
-  onBlur: (e: any) => void;
-  value: string;
+  onBlur?: (e: any) => void;
+  value: string | undefined | DefaultTFuncReturn;
+  maxLength?: number;
+  isDropdown?: boolean;
+  isOpen?: boolean;
 }
 
 export const Input: FC<IInput> = ({
@@ -15,30 +20,59 @@ export const Input: FC<IInput> = ({
   onChangeText,
   onBlur,
   value,
+  maxLength,
+  isDropdown,
+  isOpen,
 }) => {
   return (
-    <View style={{width: '100%', alignItems: 'center'}}>
+    <View style={styles.container}>
       <TextInput
-        style={styles.input}
+        style={[styles.input, {marginStart: isDropdown ? 12 : undefined}]}
         placeholder={placeholder}
         onChangeText={onChangeText}
         onBlur={onBlur}
-        value={value}
+        value={value?.toString()}
+        // defaultValue={stringValue}
+        maxLength={maxLength}
+        placeholderTextColor={isDropdown ? Colors.primary : Colors.grey}
+        editable={!isDropdown}
+        pointerEvents={isDropdown ? 'none' : undefined}
       />
+      <>
+        {isDropdown ? (
+          <DownIcon
+            style={[
+              styles.icon,
+              {transform: isOpen ? [{rotate: '180deg'}] : [{rotate: '0deg'}]},
+            ]}
+          />
+        ) : null}
+      </>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  input: {
+  container: {
     width: '90%',
+    alignItems: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginBottom: 15,
+  },
+  input: {
+    width: '100%',
     height: 46,
     borderColor: Colors.primary,
     borderWidth: 1,
-    marginBottom: 15,
     padding: 14,
     paddingStart: 21,
     fontFamily: Fonts.Rubik_Light,
     color: Colors.primary,
+  },
+  icon: {
+    left: -28,
+    padding: 0,
+    margin: 0,
   },
 });

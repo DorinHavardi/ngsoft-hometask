@@ -1,12 +1,12 @@
-import {makeAutoObservable} from 'mobx';
+import {makeAutoObservable, observable} from 'mobx';
 import {RootStore} from '.';
 
-export interface IUser {
-  userId: number;
-  userFirstname: string;
-  userLastname: string;
-  userBirthYear: number;
-  requestReason: string;
+export interface IUserDetails {
+  firstname: string;
+  lastname?: string;
+  id?: string;
+  birthYear?: number;
+  requestReason?: string;
 }
 
 export default class UserStore {
@@ -15,5 +15,15 @@ export default class UserStore {
   constructor(rootStore: RootStore) {
     this._rootStore = rootStore;
     makeAutoObservable(this);
+  }
+
+  private _currentUser?: IUserDetails = observable({} as IUserDetails);
+
+  setUserDetails = (value: IUserDetails) => {
+    this._currentUser = value as IUserDetails;
+  };
+
+  get currentUser() {
+    return this._currentUser;
   }
 }

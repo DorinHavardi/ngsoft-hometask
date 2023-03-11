@@ -14,9 +14,10 @@
         "title": "פרטי מגיש הבקשה",
         "subtitle": "הכנס פרטים אישיים",
         "form": {
-            "firstName": "שם פרטי",
-            "lastName": "שם משפחה",
+            "firstname": "שם פרטי",
+            "lastname": "שם משפחה",
             "id": "תעודת זהות",
+            "birthYear": "שנת לידה",
             "requestReason": "סיבת הנפקת תעודה",
             "newsletter": "הנני מאשר/ת קבלת דיוור",
             "reasonOption1": "אובדן",

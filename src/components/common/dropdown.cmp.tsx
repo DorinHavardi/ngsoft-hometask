@@ -1,4 +1,13 @@
-import React, {FC, useState} from 'react';
+import {DefaultTFuncReturn} from 'i18next';
+import {observer} from 'mobx-react';
+import React, {
+  ChangeEvent,
+  Dispatch,
+  FC,
+  SetStateAction,
+  useEffect,
+  useState,
+} from 'react';
 import {useTranslation} from 'react-i18next';
 import {
   ScrollView,
@@ -9,44 +18,71 @@ import {
 } from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
-import { DownIcon } from '../svg/down.icon';
+import {DownIcon} from '../svg/down.icon';
+import {Input} from './input.cmp';
 
 interface IDropdown {
   options: Array<string>;
+  // chosenOption?: string;
+  value?: string | undefined;
+  defaultValue?: string | number | DefaultTFuncReturn;
+  onChangeText: (e: string | ChangeEvent<any>) => void;
+  selectedOption: string | null;
+  setSelectedOption: Dispatch<SetStateAction<string | null>>;
+  placeholder: string;
+  onSelect: ()=> void;
 }
 
-export const Dropdown: FC<IDropdown> = ({options}) => {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
-  const {t} = useTranslation();
+export const Dropdown: FC<IDropdown> = observer(
+  ({
+    options,
+    value,
+    placeholder,
+    onChangeText,
+    selectedOption,
+    setSelectedOption,
+    onSelect
+  }) => {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
 
-  const handleDropdown = () => {
-    setIsOpen(!isOpen);
-  };
-  return (
-    <View style={{width: '100%', alignItems: 'center', marginBottom: 15}}>
-      <TouchableOpacity
-        style={styles.dropdown}
-        onPress={() => handleDropdown()}>
-        <Text style={styles.text}>{t('profile.form.requestReason')}</Text>
-        <DownIcon
-          style={{
-            transform: isOpen ? [{rotate: '180deg'}] : [{rotate: '0deg'}],
-          }}
-        />
-      </TouchableOpacity>
-      <ScrollView
-        style={[styles.box, {display: isOpen ? 'flex' : 'none'}]}
-        scrollEnabled={true}>
-        {options.map((option, i) => (
-          <TouchableOpacity key={i}>
-            <Text style={[styles.text, styles.option]}>{option}</Text>
-            <View style={styles.hr} />
-          </TouchableOpacity>
-        ))}
-      </ScrollView>
-    </View>
-  );
-};
+    useEffect(() => {}, [selectedOption]);
+
+    const handleDropdown = () => {
+      setIsOpen(!isOpen);
+    };
+
+    const handleSelect = (value: string) => {
+      setSelectedOption(value);
+      setIsOpen(false);
+
+      return selectedOption;
+    };
+    return (
+      <>
+        <TouchableOpacity onPress={() => handleDropdown()}>
+          <Input
+            isDropdown={true}
+            onChangeText={onChangeText}
+            value={selectedOption}
+            placeholder={placeholder}
+            isOpen={isOpen}
+          />
+        </TouchableOpacity>
+        <ScrollView
+          style={[styles.box, {display: isOpen ? 'flex' : 'none'}]}
+          nestedScrollEnabled={true}
+          showsVerticalScrollIndicator={false}>
+          {options.map((option, i) => (
+            <TouchableOpacity key={i} onPress={() => {handleSelect(option); onSelect}}>
+              <Text style={[styles.text, styles.option]}>{option}</Text>
+              <View style={styles.hr} />
+            </TouchableOpacity>
+          ))}
+        </ScrollView>
+      </>
+    );
+  },
+);
 
 const styles = StyleSheet.create({
   dropdown: {
@@ -74,9 +110,12 @@ const styles = StyleSheet.create({
     borderColor: Colors.primary,
     borderWidth: 1,
     padding: 14,
-    paddingStart: 21,
+    paddingStart: 15,
+    paddingBottom: 25,
     fontFamily: Fonts.Rubik_Light,
     borderTopWidth: 0,
+    marginBottom: 15,
+    top: -15,
   },
   option: {
     marginBottom: 5,
