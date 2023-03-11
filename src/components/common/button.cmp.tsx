@@ -5,12 +5,13 @@ import {Fonts} from '../../theme/fonts';
 
 interface IButton {
   title: string;
+  onPress: () => void;
 }
 
-export const Button: FC<IButton> = ({title}) => {
+export const Button: FC<IButton> = ({title, onPress}) => {
   return (
     <View style={{width: '100%', alignItems: 'center'}}>
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} onPress={onPress}>
         <Text style={styles.title}>{title}</Text>
       </TouchableOpacity>
     </View>

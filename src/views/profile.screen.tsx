@@ -16,6 +16,7 @@ import {Button} from '../components/common/button.cmp';
 import {Dropdown} from '../components/common/dropdown.cmp';
 import {TabBar} from '../components/common/tab-bar.cmp';
 import {Header} from '../components/common/header.cmp';
+import {Formik} from 'formik';
 
 const windowWidth = Dimensions.get('window').width;
 const windowHeight = Dimensions.get('window').height;
@@ -38,12 +39,26 @@ export const Profile: FC<any> = () => {
           subtitle={`${t('profile.subtitle')}`}
         />
         <View style={styles.formBackground}>
-          <View style={styles.form}>
-            <ProgressBar phases={4} currentPhase={2} />
-            <Input placeholder={`${t('profile.form.firstName')}`} />
-            <Dropdown options={options} />
-            <Button title={`${t('common.nextPhase')}`} />
-          </View>
+          <Formik
+            initialValues={{firstname: ''}}
+            onSubmit={values => console.log(values)}>
+            {({handleChange, handleSubmit, handleBlur, values}) => (
+              <View style={styles.form}>
+                <ProgressBar phases={4} currentPhase={2} />
+                <Input
+                  placeholder={`${t('profile.form.firstName')}`}
+                  onChangeText={handleChange('firstname')}
+                  onBlur={handleBlur('firstname')}
+                  value={values.firstname}
+                />
+                <Dropdown options={options} />
+                <Button
+                  title={`${t('common.nextPhase')}`}
+                  onPress={handleSubmit}
+                />
+              </View>
+            )}
+          </Formik>
         </View>
       </ScrollView>
       <TabBar />
