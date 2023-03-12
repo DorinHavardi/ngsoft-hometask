@@ -82,8 +82,7 @@ const styles = StyleSheet.create({
     textAlign: 'right',
   },
   icon: {
-    left: Platform.OS === 'android' ? 20 : undefined,
-    right: Platform.OS === 'ios' ? 20 : undefined,
+    right: 20,
     position: 'absolute',
     padding: 0,
     margin: 0,
