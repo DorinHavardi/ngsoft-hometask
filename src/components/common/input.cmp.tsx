@@ -3,6 +3,7 @@ import {ChangeEvent, FC} from 'react';
 import {
   I18nManager,
   KeyboardType,
+  Platform,
   StyleSheet,
   TextInput,
   View,
@@ -78,9 +79,11 @@ const styles = StyleSheet.create({
     paddingStart: 21,
     fontFamily: Fonts.Rubik_Light,
     color: Colors.primary,
+    textAlign: 'right',
   },
   icon: {
-    left: 20,
+    left: Platform.OS === 'android' ? 20 : undefined,
+    right: Platform.OS === 'ios' ? 20 : undefined,
     position: 'absolute',
     padding: 0,
     margin: 0,
