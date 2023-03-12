@@ -1,6 +1,12 @@
 import {DefaultTFuncReturn} from 'i18next';
 import {ChangeEvent, FC} from 'react';
-import {KeyboardType, StyleSheet, TextInput, View} from 'react-native';
+import {
+  I18nManager,
+  KeyboardType,
+  StyleSheet,
+  TextInput,
+  View,
+} from 'react-native';
 import {Colors} from '../../theme/colors';
 import {Fonts} from '../../theme/fonts';
 import {DownIcon} from '../svg/down.icon';
@@ -28,8 +34,16 @@ export const Input: FC<IInput> = ({
 }) => {
   return (
     <View style={styles.container}>
+      {isDropdown ? (
+        <DownIcon
+          style={[
+            styles.icon,
+            {transform: isOpen ? [{rotate: '180deg'}] : [{rotate: '0deg'}]},
+          ]}
+        />
+      ) : null}
       <TextInput
-        style={[styles.input, {marginStart: isDropdown ? 12 : undefined}]}
+        style={[styles.input]}
         placeholder={placeholder}
         onChangeText={onChangeText}
         onBlur={onBlur}
@@ -40,16 +54,8 @@ export const Input: FC<IInput> = ({
         pointerEvents={isDropdown ? 'none' : undefined}
         keyboardType={keyboardType}
       />
-      <>
-        {isDropdown ? (
-          <DownIcon
-            style={[
-              styles.icon,
-              {transform: isOpen ? [{rotate: '180deg'}] : [{rotate: '0deg'}]},
-            ]}
-          />
-        ) : null}
-      </>
+      {/* <> */}
+      {/* </> */}
     </View>
   );
 };
@@ -59,6 +65,7 @@ const styles = StyleSheet.create({
     width: '90%',
     alignItems: 'center',
     flexDirection: 'row',
+    display: 'flex',
     justifyContent: 'space-between',
     marginBottom: 15,
   },
@@ -73,7 +80,8 @@ const styles = StyleSheet.create({
     color: Colors.primary,
   },
   icon: {
-    left: -28,
+    left: 20,
+    position: 'absolute',
     padding: 0,
     margin: 0,
   },

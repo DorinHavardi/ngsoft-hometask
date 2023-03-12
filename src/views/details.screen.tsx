@@ -43,7 +43,7 @@ export const Details: FC<any> = observer(() => {
             </Text>
             <Text style={styles.text}>{t('details.description')}</Text>
             <Button
-              title={`${t('common.scanButton')}`}
+              title={`${t('details.scanButton')}`}
               onPress={() => console.log('ok')}
             />
           </View>

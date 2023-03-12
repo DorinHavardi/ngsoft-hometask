@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import {I18nManager, SafeAreaView, StyleSheet, View} from 'react-native';
+import {I18nManager} from 'react-native';
 import {Profile} from './src/views/profile.screen';
 import './src/translates/i18n';
 import {observer} from 'mobx-react';
@@ -10,12 +10,11 @@ import {Details} from './src/views/details.screen';
 const Stack = createNativeStackNavigator();
 
 const App = () => {
-  const initializeLang = async () => {
+  const initializeLang = () => {
     const isRTL = true;
-
     I18nManager.forceRTL(isRTL);
     I18nManager.allowRTL(isRTL);
-    I18nManager.swapLeftAndRightInRTL(true);
+    I18nManager.swapLeftAndRightInRTL(isRTL);
   };
 
   useEffect(() => {
@@ -43,7 +42,5 @@ const App = () => {
     </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default observer(App);

@@ -114,6 +114,7 @@ const styles = StyleSheet.create({
   },
   option: {
     marginBottom: 5,
+    paddingStart: 10,
   },
   hr: {
     borderBottomColor: Colors.grey,
